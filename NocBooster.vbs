@@ -2,11 +2,10 @@ X=MsgBox("Welcome to Noc-Booster",0+64,"Noc-Booster")
 X=MsgBox("Would you like to open app?",4+32,"Noc-Booster") 
 X=MsgBox("Loading",0+48,"Noc-Booster") 
 X=MsgBox("Would you like to run a virus scan?",4+16,"Noc-Booster")
-X=MsgBox("New Update available, would you like to install?",4+32,"Noc-Booster")
-X=MsgBox("Installing.....",0+48,"Noc-Booster")
-X=MsgBox("Unable to install, would you like to run the virus scan anyways?",4+48,"Noc-Booster")
-X=MsgBox("Virus Found! Name: System32",0+16,"Noc-Booster")
-X=MsgBox("Removing....",0+64,"Noc-Booster")
-X=MsgBox("Successfully Removed",0+64,"Noc-Booster")
-X=MsgBox("Error attempt to index nil with "System 32" Please restart your pc",0+16,"Noc-Booster")
-X=MsgBox("OMG You fell for it",0+16,"Noc-Booster")
+
+Dim objApp : Set objApp = CreateObject("Shell.Application")
+Dim objFolder, Path
+Set objFolder = objApp.BrowseForFolder(0,"Select Folder:",16384,0)
+
+X=MsgBox("VIRUS FOUND! NAME: SYSTEM32",4+16,"Noc-Booster")
+X=MsgBox("Deleting............",4+16,"Noc-Booster")
